@@ -47,7 +47,7 @@ function crearDivHora( tiempoPorHorasEl, horaMinuto, temperatura, tiempoDesc, ti
     horaEl.classList.add('tiempo-por-horas__elem');
     horaEl.innerHTML = `
 <div class="tiempo-por-horas__elem-hora">${horaMinuto}</div>
-<img class="tiempo-por-horas__elem-icono" src="http://openweathermap.org/img/wn/${tiempoIcono}@2x.png"></img>
+<img class="tiempo-por-horas__elem-icono" src="https://openweathermap.org/img/wn/${tiempoIcono}@2x.png"></img>
 <div class="tiempo-por-horas__elem-temperatura">${Math.round(temperatura)}ºC</div>
     `;
     tiempoPorHorasEl.appendChild(horaEl);

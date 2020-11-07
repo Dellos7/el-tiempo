@@ -2,7 +2,7 @@
 
 include_once( "./bootstrap.php" );
 //$apiKey = '977d63d66ab0b41b847912f5c1bd6ee9';
-//$apiBaseUrl = 'http://api.openweathermap.org/data/2.5/weather';
+//$apiBaseUrl = 'https://api.openweathermap.org/data/2.5/weather';
 $apiKey = $_ENV['OPENWEATHERMAP_API_KEY'];
 $apiBaseUrl = $_ENV['API_BASE_URL'] . '/weather';
 $apiBusquedaUrl .= $apiBaseUrl . '/?appid=' . $apiKey . '&lang=es&units=metric';
