@@ -1,0 +1,27 @@
+<div class="tiempo">
+    <div id="tiempo-localidad" class="tiempo__localidad"></div>
+    <div id="tiempo-descripcion" class="tiempo__descripcion"></div>
+    <img id="tiempo-icono" class="tiempo__icono" src="http://openweathermap.org/img/wn/"/>
+    <div id="tiempo-temperatura" class="tiempo__temperatura"></div>
+    <div id="sunrise" class="tiempo__sunrise">
+        <img src="imgs/sunrise.png" alt="Hora de la salida del sol">
+        <div class="tiempo__sunrise-hora"></div>
+    </div>
+    <div id="sunset" class="tiempo__sunset">
+        <img src="imgs/sunset.png" alt="Hora de la puesta del sol">
+        <div class="tiempo__sunset-hora"></div>
+    </div>
+</div>
+<!--<form id="consultar-tiempo-horas-form" method="POST" action="consultar_prevision_horas.php">
+    <input type="hidden" name="lat">
+    <input type="hidden" name="lon">
+    <button type="submit">Consultar tiempo por horas</button>
+</form>-->
+
+<form id="consultar-tiempo-horas-form" class="consultar-tiempo-horas-form" onsubmit="return consultarTiempoPorHoras();">
+    <input type="hidden" name="lat">
+    <input type="hidden" name="lon">
+    <button type="submit">Tiempo por horas</button>
+</form>
+
+<div id="tiempo-por-horas" class="tiempo-por-horas oculto"></div>

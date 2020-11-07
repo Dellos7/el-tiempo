@@ -1,0 +1,217 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.header h1{
+    font-size: 4rem;
+    color: #009688;
+}
+
+.main{
+    min-height: 90vh;
+}
+
+.footer{
+    height: 3rem;
+    margin: 1rem;
+    padding-top: 1rem;
+    text-align: center;
+    border-top: 1px solid lightgray;
+}
+
+.formulario-consulta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.formulario-consulta > *{
+    width: 25rem;
+    height: 3rem;
+    margin: .5rem;
+    padding: .5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.btn-consultar{
+    height: 4rem;
+}
+
+.tiempo{
+    font-size: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    display: grid;
+    grid-gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    /*grid-template-columns: 10rem 20rem;*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        'localidad localidad localidad localidad'
+        'tiempo-descripcion tiempo-descripcion tiempo-descripcion tiempo-descripcion'
+        'tiempo-icono tiempo-icono temperatura temperatura'
+        'sunrise sunrise sunset sunset';
+    background: #fefefe;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.tiempo__localidad{
+    grid-area: localidad;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.tiempo__descripcion{
+    grid-area: tiempo-descripcion;
+    color: gray;
+}
+
+.tiempo__icono{
+    grid-area: tiempo-icono;
+    grid-column: 2 / 2;
+}
+
+.tiempo__temperatura{
+    grid-area: temperatura;
+    justify-self: start;
+    color: #009688;
+}
+
+.tiempo__sunrise, .tiempo__sunset{
+    display: flex;
+    flex-flow: row;
+}
+
+.tiempo__sunrise{
+    grid-area: sunrise;
+    margin-bottom: 2rem;
+}
+
+.tiempo__sunset{
+    grid-area: sunset;
+    margin-bottom: 2rem;
+}
+
+.tiempo__sunrise img, .tiempo__sunset img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.tiempo__sunrise-hora, .tiempo__sunset-hora{
+    margin-left: 1rem;
+    height: 3rem;
+    line-height: 3rem;
+}
+
+.error{
+    font-size: 2rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #e91e63;
+    color: white;
+    text-align: center;
+    max-width: 80%;
+}
+
+.consultar-tiempo-horas-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 5rem;
+    margin-top: 3rem;
+}
+
+.consultar-tiempo-horas-form.oculto{
+    display: none;
+}
+
+.consultar-tiempo-horas-form button{
+    width: 25rem;
+    min-height: 3rem;
+    margin: .5rem;
+    padding: .5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.tiempo-por-horas{
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    background: #fefefe;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    display: flex;
+    flex-flow: row;
+    overflow-x: scroll;
+}
+
+.tiempo-por-horas.oculto{
+    display: none;
+}
+
+.tiempo-por-horas__elem{
+    margin: 1.5rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tiempo-por-horas__elem-icono{
+    width: 8rem;
+    height: 8rem;
+}
+
+button{
+    border-radius: 100px;
+    background-color: #00bcd4;
+    color: white;
+    cursor: pointer;
+}
+
+a{
+    color: inherit;
+}
+
+a:link{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+@media all and ( min-width: 768px ){
+    .tiempo, .tiempo-por-horas{
+        max-width: 50rem;
+    }
+}
