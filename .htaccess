@@ -2,3 +2,5 @@ Options -Indexes
 <Files ".env">
     Require all denied
 </Files>
+RewriteEngine On
+RewriteBase /prueba-tu-suerte-oposicion
